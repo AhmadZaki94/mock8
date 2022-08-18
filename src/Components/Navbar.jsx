@@ -1,11 +1,9 @@
 import {
     Box,
     Flex,
-    Text,
     IconButton,
-    // Link,
-    // Icon,
     Stack,
+    Heading,
     Collapse,
     useColorModeValue,
     useBreakpointValue,
@@ -15,7 +13,7 @@ import {
     HamburgerIcon,
     CloseIcon,
   } from '@chakra-ui/icons';
-// import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export const Navbar = () => {
@@ -25,8 +23,8 @@ export const Navbar = () => {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        bg={useColorModeValue('#1CD6CE', 'gray.800')}
+        color={useColorModeValue('#293462', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -48,20 +46,24 @@ export const Navbar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} gap='50px'>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Home
-          </Text>
-
-          <Text>Login</Text>
-          <Text>Register</Text>
-          <Text>Emplpoyees</Text>
-
-          {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            
-          </Flex> */}
+          <Link to='/'>
+            <Heading
+                textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+                fontFamily={'heading'}
+                color={useColorModeValue('#293462', 'white')}
+                p='15px' as='h4' size='md'>
+                Home
+            </Heading>
+          </Link>
+          <Link to='/login'>
+            <Heading p='15px' as='h4' size='md'>Login</Heading>
+          </Link>
+          <Link to='/register'>
+            <Heading p='15px' as='h4' size='md'>Register</Heading>
+          </Link>
+          <Link to='/employees'>
+            <Heading p='15px' as='h4' size='md'>Employees</Heading>
+          </Link>
         </Flex>
 
         <Stack
