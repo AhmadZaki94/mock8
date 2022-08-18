@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { AuthWrapper } from './AuthWrapper';
+// import { AuthWrapper } from './AuthWrapper';
 import { AddEmployees } from './routes/AddEmployees';
 import { Employee } from './routes/Employee';
 import { Employees } from './routes/Employees';

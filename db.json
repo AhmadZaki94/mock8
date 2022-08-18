@@ -1,0 +1,14 @@
+{
+  "employeesDetails": [
+    {
+      "name": "zaki",
+      "gender": "male",
+      "age": "28",
+      "contact_no": "7896541230",
+      "department": "admin",
+      "image": "erwrere",
+      "salary": "212222",
+      "id": 1
+    }
+  ]
+}
