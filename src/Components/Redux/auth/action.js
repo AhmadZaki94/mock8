@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Axios from 'axios';
 
 export const SIGN_IN_REQUEST = 'SIGN_IN_REQUEST';
 export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
@@ -26,7 +26,9 @@ const signInFailure = (payload) => {
 
 const signIn = (payload) => (dispatch) => {
     dispatch(signInRequest());
-    // axios.post()
+    Axios.post('https://masai-api-mocker.herokuapp.com/auth/login', payload)
+    .then((r) => dispatch(signInSuccess(r.data)))
+    .then((e) => dispatch(signInFailure(e.data)))
 };
 
 export { signIn };
