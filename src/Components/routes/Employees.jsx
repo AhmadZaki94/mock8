@@ -20,7 +20,7 @@ export const Employees = () => {
 
 
     const getData = () => {
-        axios.get('http://localhost:8080/employeesDetails')
+        axios.get('https://serverjsonmock.herokuapp.com/employeesDetails')
         .then((r) => {
             setData(r.data);
             console.log(r.data);
@@ -29,7 +29,7 @@ export const Employees = () => {
     };
 
     const deleteFunc = (id) => {
-        axios.delete(`http://localhost:8080/employeesDetails/${id}`)
+        axios.delete(`https://serverjsonmock.herokuapp.com/employeesDetails/${id}`)
         .then((r) => {
             setDele(r.data)})
         .catch((e) => console.log(e));

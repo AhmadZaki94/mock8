@@ -41,7 +41,7 @@ export const AddEmployees = () => {
         e.preventDefault();
         setData([...data, form]);
 
-        axios.post('http://localhost:8080/employeesDetails', form)
+        axios.post('https://serverjsonmock.herokuapp.com/employeesDetails', form)
         .then((r) => {
              alert("Data Successflly Submitted");
              navigate('/employees');
